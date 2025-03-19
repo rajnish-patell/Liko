@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Syne:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --white: #f5f7f5;
+    --white-solid: #fff;
+    --black: #1e1e1e;
+    --black-alt: #141414;
+    --dark: #121212;
+    --orange: #eb5939;
+    --grey-light: #f4f4f4;
+    --grey-dark: #262626;
+    --grey-medium: #5d5d63;
+    --grey-bg: #f7f7f7;
+    --text-body: #5d5d63;
+    --theme-primary: #336ef9;
+    --border: #eaeaeb;
+    --ff-body: "Syne", sans-serif;
+    --ff-gallery: 'Gallery';
+    --ff-marcellus: "Marcellus", serif;
+}
+
+@font-face {
+    font-family: 'Gallery';
+    src: url('../fonts/GalleryRegular.woff2') format('woff2'),
+        url('../fonts/GalleryRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-syne {
+    font-family: "Syne", sans-serif;
+}
+
+.font-marcellus {
+    font-family: "Marcellus", serif;
+}
+
+.font-gallery {
+    font-family: 'Gallery';
+}
+
+
+
+
+
+/* Smooth scroll stuff */
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.js-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.js-scroll {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    will-change: transform;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-body);
+    line-height: 26px;
+    font-family: "Syne", sans-serif;
+}
+
+.container {
+    transition: all 1s;
+}
+
+.container-1740 {
+    max-width: 1740px;
+}
+
+
+.font-140 {
+    font-size: 140px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+
+.dark-btn {
+    height: 60px;
+    line-height: 55px;
+    border-radius: 40px;
+    padding: 0 18px 0 24px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    z-index: 9;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: capitalize;
+    position: relative;
+    transition: all 0.3s;
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid transparent;
+}
+
+
+.dark-btn:hover {
+    background-color: transparent;
+    color: var(--black);
+    border-color: var(--black);
+}
+
+.dark-btn:hover span .svg-icon {
+    color: var(--white);
+}
+
+.svg-icon {
+    position: absolute;
+    top: 7px;
+    left: -2px;
+    right: 0;
+    z-index: 2;
+    margin: 0 auto;
+    transition: 0.3s;
+    color: var(--black);
+}
+
+.dark-btn:hover .svg-bg {
+    animation: rotate2 10s linear infinite;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*═══════════════════════════════╗
+  ║          Header  CSS         ║
+  ╚═══════════════════════════════*/
+
+.header {
+    padding: 35px 0;
+
+}
+
+.header .row {
+    align-items: center;
+}
+
+.header-logo img {
+    width: 85px;
+    height: 100%;
+}
+
+
+.header ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+.header ul li a {
+    text-decoration: none;
+}
+
+.menu-list {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 15px;
+    background-color: rgba(46, 46, 46, .9);
+    border-radius: 30px;
+}
+
+
+.menu-list a {
+    color: var(--white-solid);
+    font-size: 17px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 12px 0;
+    transition: .3s;
+    display: inline-block;
+}
+
+.menu-list li {
+    padding: 0 15px;
+}
+
+.header-menu {
+    text-align: center;
+}
+
+
+.social-list {
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+}
+
+.header-social-links {
+    text-align: end;
+}
+
+.social-list li a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-light);
+    color: var(--black);
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.social-list li a:hover {
+    background-color: var(--black);
+    color: var(--grey-light);
+}
+
+
+
+/*═══════════════════════════════╗
+  ║          Header  CSS         ║
+  ╚═══════════════════════════════*/
+
+
+/*═══════════════════════════════╗
+  ║        heroSection  CSS      ║
+  ╚═══════════════════════════════*/
+
+
+.heroSection {
+    position: relative;
+    padding-top: 160px;
+    min-height: 80svh;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.circle-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.circle-shape span {
+    height: 480px;
+    width: 460px;
+    display: inline-block;
+    filter: blur(35px);
+    border-radius: 62% 47% 82% 35%/45% 45% 80% 66%;
+    background: linear-gradient(220deg, rgba(148, 254, 98, 0.5) 0.77%, rgba(255, 226, 122, 0.5) 55.4%, rgba(234, 94, 94, 0.5) 100%);
+}
+
+
+.heroSection h1 {
+    color: var(--black);
+}
+
+.quote {
+    line-height: 1;
+    text-align: center;
+    overflow: hidden;
+    color: var(--black);
+    padding-bottom: 18px;
+}
+
+
+
+/*═══════════════════════════════╗
+  ║       heroSection  CSS       ║
+  ╚═══════════════════════════════*/
