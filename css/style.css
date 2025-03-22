@@ -109,6 +109,24 @@ body {
     margin-bottom: 20px;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-45 {
+    margin-bottom: 45px;
+}
+
+
+p {
+    font-family: var(---ff-p);
+    color: var(--text-body);
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
 
 .dark-btn {
     height: 60px;
@@ -155,6 +173,12 @@ body {
 .dark-btn:hover .svg-bg {
     animation: rotate2 10s linear infinite;
 }
+
+
+.sectionPadding {
+    padding: 110px 0;
+}
+
 
 @keyframes rotate2 {
     0% {
@@ -307,3 +331,86 @@ body {
 /*═══════════════════════════════╗
   ║       heroSection  CSS       ║
   ╚═══════════════════════════════*/
+
+
+
+/* Optional styling */
+.wrap {
+    overflow: hidden;
+    /* Prevents the text from showing outside its container during animation */
+}
+
+.quote {
+    transform: translateY(100%);
+    /* Start with text off-screen at the bottom */
+    opacity: 0;
+    /* Start fully invisible */
+}
+
+
+span.subtitle-text.text_invert {
+    padding: 0px 15px;
+    display: inline-block;
+}
+
+.section-subtitle-2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--black);
+    font-family: var(--ff-marcellus);
+    margin-bottom: 25px;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+
+.section-title-90 {
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1.8px;
+    color: var(--black);
+    font-family: var(--ff-marcellus);
+}
+
+.about-content {
+    padding-right: 230px;
+}
+
+.about-shape {
+    margin-right: 160px;
+}
+
+.about-shape img {
+    animation: rotate2 5s linear infinite;
+}
+
+.marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: #fff; /* adjust as needed */
+    padding: 10px 0;
+    margin-bottom: 2rem; /* spacing between marquees */
+  }
+  
+  .marquee-inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  .marquee-item {
+    flex: none;
+    margin-right: 2rem;
+    width: 200px;
+}
+  
+  .marquee-item img {
+    display: block;
+    max-height: 80px; /* adjust as needed */
+    width: auto;
+  }
+  

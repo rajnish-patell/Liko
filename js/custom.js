@@ -1,46 +1,72 @@
 // SMOOTH SCROLL BAR
 
-
 const body = document.body,
-      jsScroll = document.getElementsByClassName('js-scroll')[0],
-      height = jsScroll.getBoundingClientRect().height - 1,
-      speed = 0.05
+  jsScroll = document.getElementsByClassName("js-scroll")[0],
+  height = jsScroll.getBoundingClientRect().height - 1,
+  speed = 0.05;
 
-var offset = 0
+var offset = 0;
 
-body.style.height = Math.floor(height) + "px"
+body.style.height = Math.floor(height) + "px";
 
 function smoothScroll() {
-    offset += (window.pageYOffset - offset) * speed
-    
-    var scroll = "translateY(-" + offset + "px) translateZ(0)"
-    jsScroll.style.transform = scroll
-    
-    raf = requestAnimationFrame(smoothScroll)
-}
-smoothScroll()
+  offset += (window.pageYOffset - offset) * speed;
 
+  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+  jsScroll.style.transform = scroll;
+
+  raf = requestAnimationFrame(smoothScroll);
+}
+smoothScroll();
 
 // SMOOTH SCROLL BAR
 
+// Use GSAP to animate the text
+gsap.registerPlugin(ScrollTrigger); // If using ScrollTrigger for scroll-based animations
+
+gsap.timeline().to(".quote", {
+  y: 0, // Moves text to its original position (from translateY(100%))
+  opacity: 1, // Fades it in
+  duration: 1.5, // Adjust timing as needed
+  stagger: 0.2, // Adds a slight delay between each element
+  ease: "power4.out", // Smooth easing for a polished look
+});
+
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".scroll-text");
+
+  elements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.style.animation = "scrollReveal 1s ease-out forwards";
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(SplitText, ScrollTrigger);
+  // Animate marquee scrolling left-to-right (reverse direction)
+  const marqueeRightInner = document.querySelector(
+    ".marquee-right .marquee-inner"
+  );
+  const marqueeRightWidth = marqueeRightInner.scrollWidth / 2; // half, since content is duplicated
 
-    // Target the text
-    let split = new SplitText(".quote", { type: "chars" });
+  gsap.to(marqueeRightInner, {
+    x: marqueeRightWidth, // move right
+    ease: "none",
+    duration: 8, // adjust for speed
+    repeat: -1, // loop indefinitely
+  });
 
-    // Animation on scroll
-    gsap.from(split.chars, {
-        opacity: 0,
-        y: 50,
-        stagger: 0.05,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".quote",
-            start: "top 80%", // When 80% of the text is in the viewport
-            end: "top 30%",
-            toggleActions: "play none none none"
-        }
-    });
+  // Animate marquee scrolling right-to-left (default direction)
+  const marqueeLeftInner = document.querySelector(
+    ".marquee-left .marquee-inner"
+  );
+  const marqueeLeftWidth = marqueeLeftInner.scrollWidth / 2; // half, since content is duplicated
+
+  gsap.to(marqueeLeftInner, {
+    x: -marqueeLeftWidth, // move left
+    ease: "none",
+    duration: 8, // adjust for speed
+    repeat: -1, // loop indefinitely
+  });
 });
