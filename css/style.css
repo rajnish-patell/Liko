@@ -196,8 +196,9 @@ p {
 
 .header {
     padding: 35px 0;
-
+    position: relative;
 }
+
 
 .header .row {
     align-items: center;
@@ -414,3 +415,231 @@ span.subtitle-text.text_invert {
     width: auto;
   }
   
+  .textScroll {
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+  }
+
+  .textScroll .section-title-90 {
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  .textScroll .marquee-item {
+    width: auto
+  }
+
+
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.titleWrapper .about-shape {
+    margin: 0;
+}
+
+.titleWrapper .about-shape img {
+    max-width: 70px;
+    opacity: 0.2;
+}
+
+.service-wrap {
+    padding-top: 65px;
+    padding-bottom: 70px;
+    border-top: 1px solid rgba(25, 25, 26, 0.1);
+}
+
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+
+  
+
+
+.service-content {
+    padding: 0px 70px;
+}
+
+.service-category span {
+    height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 0px 20px;
+    line-height: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--black);
+    border: 1px solid #E4E4E8;
+    margin-right: 8px;
+}
+
+
+
+.service-title {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--black);
+    font-family: var(--ff-marcellus);
+}
+
+.service-title a {
+    background-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
+    display: inline;
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s linear;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.service-title:hover a {
+    background-size: 0% 2px, 100% 2px;
+}
+
+
+.btn-zikzak-sm span .svg-bg {
+    color: var(--white-solid);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-zikzak-sm .zikzak-content svg {
+    display: block;
+    margin-top: 7px;
+    transition: 0.7s;
+}
+
+.btn-zikzak-sm .zikzak-content {
+    position: absolute;
+    top: -20px;
+    left: 43px;
+    z-index: 2;
+}
+
+.btn-zikzak-sm {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.18px;
+    color: var(--black);
+    text-align: left;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+
+.btn-zikzak-sm:hover span .svg-bg {
+    color: var(--black);
+    animation: rotate2 10s linear infinite;
+}
+
+
+.btn-zikzak-sm:hover .zikzak-content {
+    color: var(--white-solid);
+}
+
+.techLogo img {
+    filter: grayscale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ourWork {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.ourWork .section-subtitle-2,.ourWork .section-title-90 {
+    color: var(--white);
+}
+
+
+
+.textRow{
+    position: relative;
+    padding: 20px 0;
+}
+
+
+.textRow:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--white);
+    transition: all 0.5s;
+}
+
+
+.textRow::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff1a;
+    transition: all 0.5s;
+}
+
+.textRow a {
+    display: flex;
+    align-items: center;
+    min-height: 130px;
+}
+
+.projectImg img {
+    max-width: 130px;
+    border-radius: 10px;
+}
+
+.projectTitle {
+    display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        transition-delay: .1s;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.135,.9,.15,1);
+        transition-duration: .9s;
+}
+
+.textRow a .projectImg img {
+        width: 0;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.135,.9,.15,1);
+        transition-duration: .7s;
+        transform: translate3d(0,0,0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        display: inline-flex;
+        height: 130px;
+    }
+
+
+.textRow a:hover .projectImg img {
+    width: 130px;
+    height: 130px;
+    transition: all 0.5s;
+}
