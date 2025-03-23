@@ -83,3 +83,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".swiper", {
+        loop: true,
+        navigation: {
+            nextEl: "#nextBtn",
+            prevEl: "#prevBtn",
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                gsap.fromTo(".testimonialRating", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.6, ease: "power2.out" });
+                gsap.fromTo(".testimonialTitle", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" });
+                gsap.fromTo(".testimonialTxt", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+            },
+        },
+    });
+
+    gsap.fromTo(".testimonialRating", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.6, ease: "power2.out" });
+    gsap.fromTo(".testimonialTitle", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" });
+    gsap.fromTo(".testimonialTxt", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+});
