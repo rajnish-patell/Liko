@@ -30,8 +30,8 @@
 
 @font-face {
     font-family: 'Gallery';
-    src: url('../fonts/GalleryRegular.woff2') format('woff2'),
-        url('../fonts/GalleryRegular.woff') format('woff');
+    src: url('../fonts/GalleryRegar.woff2') format('woff2'),
+        url('../fonts/GalleryRegar.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -53,6 +53,14 @@
     font-size: 18px
 }
 
+.font-14 {
+    font-size: 14px;
+}
+
+.font-16 {
+    font-size: 16px;
+    line-height: 1;
+}
 
 
 /* Smooth scroll stuff */
@@ -220,13 +228,13 @@ p {
     line-height: 39px;
 }
 
-.header ul {
+.header  {
     list-style: none;
     margin: 0;
 }
 
 
-.header ul li a {
+.header  li a {
     text-decoration: none;
 }
 
@@ -355,7 +363,7 @@ p {
     transform: translateY(100%);
     /* Start with text off-screen at the bottom */
     opacity: 0;
-    /* Start fully invisible */
+    /* Start fly invisible */
 }
 
 
@@ -1137,3 +1145,78 @@ section.aboutCompany .section-title-90 {
     border-bottom: 2px solid #0000001a;
 }
 /* About Section */
+
+
+
+
+.aboutProject .aboutProjectWrapper {
+    background-color: #EFF1FF;
+    padding: 40px 0;
+    border-radius: 16px;
+    color: var(--black);
+}
+
+.aboutProjectBody {
+    display: flex;
+  
+    flex-wrap: wrap;
+}
+
+
+.aboutProjectBody  .aboutLeft {
+    width: 50%;
+    border-right: 1px solid var(--black);
+    display: flex;
+    gap: 16px;
+    padding: 0 40px;
+}
+
+.aboutProjectBody .aboutRight {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.projectDetailsTitle {
+    padding: 0 40px;
+}
+
+.techlogyList {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.techlogyList li {
+    padding: 4px 20px;
+    background: #ffffff;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.timeSizeList {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.yellowBg {
+    background: #FFF9DA;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.lightGreenwBg {
+        background: #E6F1E8;
+        padding: 40px;
+        border-radius: 16px;
+}
+
+.uiScreensSection {
+    background-color: #F2F2F2;
+}
