@@ -1222,11 +1222,32 @@ section.aboutCompany .section-title-90 {
         border-radius: 16px;
 }
 
-.uiScreensSection {
+.lightBg {
     background-color: #F2F2F2;
 }
 
 .projectOverview .aboutSection {
     border-bottom: 1px solid var(--black);
     padding-bottom: 32px;
+}
+
+
+.contactForm {
+    color: var(--black);
+}
+
+.ahBox h6 {
+    max-width: 120px;
+    width: 100%;
+}
+
+.ahBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.ahBox p {
+    max-width: calc(100% - 136px);
+    width: 100%;
 }
