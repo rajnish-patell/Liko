@@ -100,6 +100,11 @@ body {
     transition: all 1s;
 }
 
+li {
+    line-height: 2;
+    font-size: 16px;
+}
+
 
 .font-140 {
     font-size: 7.5vw;
