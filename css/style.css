@@ -1339,3 +1339,8 @@ section.faq .accordion-button:not(.collapsed)::after {
 .accordion-header:has(.accordion-button.collapsed) {
     border: 1px solid rgb(178, 178, 178);
 }
+
+
+.main-content {
+    min-height: 100svh;
+}
