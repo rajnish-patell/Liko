@@ -13,6 +13,36 @@ function myFunction() {
 
 
 
+
+
+
+
+
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 3000, // Time in milliseconds before sliding to the next slide
+        disableOnInteraction: false, // Keep autoplay running even when the user interacts with the slider
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: { slidesPerView: 2 }
+    }
+});
+
+
+
+
+
+
+
+
+
 // SMOOTH SCROLL BAR
 
 

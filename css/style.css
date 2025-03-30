@@ -1169,7 +1169,7 @@ section.aboutCompany .section-title-90 {
 
 
 .aboutProjectBody  .aboutLeft {
-    width: 50%;
+    width: 40%;
     border-right: 1px solid var(--black);
     display: flex;
     gap: 16px;
@@ -1177,7 +1177,7 @@ section.aboutCompany .section-title-90 {
 }
 
 .aboutProjectBody .aboutRight {
-    width: 50%;
+    width: 60%;
     padding: 0 40px;
 }
 
@@ -1224,4 +1224,9 @@ section.aboutCompany .section-title-90 {
 
 .uiScreensSection {
     background-color: #F2F2F2;
+}
+
+.projectOverview .aboutSection {
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 32px;
 }
