@@ -1251,3 +1251,94 @@ section.aboutCompany .section-title-90 {
     max-width: calc(100% - 136px);
     width: 100%;
 }
+
+
+
+
+ .contact-info .info-item i {
+    background-color: #d8ff36;
+    font-size: 1.4rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item i {
+    width: 42px;
+    padding: 10px;
+    height: 42px;
+    background: #0000000a;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.faq {
+    color: var(--black);
+}
+
+
+.accordion-button {
+    border-radius: 50px !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #d8ff36;
+    color: black;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28px;
+}
+
+
+.accordion-button::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 50%;
+}
+
+
+section.faq .accordion-button:not(.collapsed)::after {
+    transform:  translateY(-50%) rotate(180deg);
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 30px;
+}
+
+
+.accordion-header:has(.accordion-button.collapsed) {
+    border: 1px solid rgb(178, 178, 178);
+}
